@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Project</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header" id="home">
+      <nav class="nav">
+        <div class="nav_inner">
+          <a class="nav-logo-wrapper" href="#home">
+            <img class="logo" src="images/logo.svg" alt="Grandma's logo" />
+          </a>
+
+          <button class="nav-toggle">
+            <svg width="35" height="35" viewBox="0 0 100 80" fill="#ef7998">
+              <rect width="100" height="16.1" rx="3.15" ry="3.15"></rect>
+              <rect y="36" width="100" height="16.1" rx="3.15" ry="3.15"></rect>
+              <rect y="72" width="100" height="16.1" rx="3.15" ry="3.15"></rect>
+            </svg>
+          </button>
+
+          <div class="nav-content" id="primary-menu">
+            <ul class="nav-menu">
+              <li class="nav-menu_item">
+                <a class="nav-menu_link" href="#home">home</a>
+              </li>
+              <li class="nav-menu_item">
+                <a class="nav-menu_link" href="#about">about</a>
+              </li>
+              <li class="nav-menu_item">
+                <a class="nav-menu_link" href="#store">store</a>
+              </li>
+            </ul>
+
+            <div class="nav-actions">
+              <div class="contact-info">
+                <span class="contact-info_icon"
+                  ><i class="fas fa-phone"></i
+                ></span>
+                <p class="contact-info_text">+ 123 456 789</p>
+              </div>
+
+              <button id="cart-info" class="cart-summary">
+                <svg
+                  class="cart-summary_icon"
+                  fill="#000000"
+                  width="18px"
+                  viewBox="0 -32 576 576"
+                >
+                  <path
+                    d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                  />
+                </svg>
+
+                <span class="cart-summary_text">
+                  <span id="item-count">2</span> items - $<span
+                    class="item-total"
+                    >10.49</span
+                  >
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="hero_content">
+          <h1 class="hero_title">
+            welcome to <strong class="hero_title-accent">grandma's</strong>
+          </h1>
+          <a href="#store" class="hero_button">explore</a>
+        </div>
+        <aside class="cart-panel">
+          <div class="cart-items-container" id="cart-items-container">
+            <div class="cart-item">
+              <img
+                src="images/cart images/cake-2.jpeg"
+                class="cart-item_image"
+                alt="Cake item"
+              />
+              <div class="cart-item_details">
+                <p class="cart-item_name">cart item</p>
+                <p class="cart-item_price">
+                  $ <span class="cart-item-price">10.99</span>
+                </p>
+              </div>
+              <button class="cart-item-remove">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+
+            <div class="cart-item">
+              <img
+                src="images/cart images/doughnut-2.jpeg"
+                class="cart-item_image"
+                alt="Doughnut item"
+              />
+              <div class="cart-item_details">
+                <p class="cart-item_name">cart item</p>
+                <p class="cart-item_price">
+                  $ <span class="cart-item-price">10.99</span>
+                </p>
+              </div>
+              <button class="cart-item-remove">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="cart-total-row">
+            <h5 class="cart-total-row_label">total</h5>
+            <h5 class="cart-total-row_value">
+              $ <strong id="cart-total">10.00</strong>
+            </h5>
+          </div>
+
+          <div class="cart-actions-row">
+            <a href="#" id="clear-cart" class="button">clear cart</a>
+            <a href="#" class="button-pink">checkout</a>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="about-section" id="about">
+        <div class="page-container">
+          <div class="about-grid">
+            <div class="about-text">
+              <h1 class="section-title">
+                about <strong class="section-title_accent">us</strong>
+              </h1>
+              <p class="about-text_paragraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+                aliquam voluptas beatae vitae expedita consectetur nesciunt quia
+                deserunt asperiores facere fuga dicta fugiat corrupti et omnis
+                porro at dolorum! Ad!
+              </p>
+              <a href="#store" class="button">explore</a>
+            </div>
+
+            <div class="about-image">
+              <div class="about-image_frame">
+                <img
+                  src="images/sweets-1.jpeg"
+                  class="about-image_img"
+                  alt="Assorted sweets"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="store-section" id="store">
+        <div class="page-container">
+          <header class="section-header">
+            <h1 class="section-title section-title--center">
+              our <strong class="section-title_accent">store</strong>
+            </h1>
+          </header>
+
+          <div class="filter-bar">
+            <button class="filter-button" data-filter="all">all</button>
+            <button class="filter-button" data-filter="cakes">cakes</button>
+            <button class="filter-button" data-filter="cupcakes">
+              cupcakes
+            </button>
+            <button class="filter-button" data-filter="sweets">sweets</button>
+            <button class="filter-button" data-filter="doughnuts">
+              doughnuts
+            </button>
+          </div>
+
+          <div class="search-bar">
+            <span class="search-bar_icon"><i class="fas fa-search"></i></span>
+            <input
+              type="text"
+              class="search-bar_input"
+              placeholder="item...."
+              id="search-item"
+            />
+          </div>
+
+          <div class="product-grid" id="store-items">
+            <article class="product-card" data-item="sweets">
+              <div class="product-card_media">
+                <img
+                  src="images/sweets-1.jpeg"
+                  class="product-card_image"
+                  alt="Sweet item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">sweet item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">5</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-item="cupcakes">
+              <div class="product-card_media">
+                <img
+                  src="images/cupcake-1.jpeg"
+                  class="product-card_image"
+                  alt="Cupcake item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">cupcake item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">5</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-item="cakes">
+              <div class="product-card_media">
+                <img
+                  src="images/cake-1.jpeg"
+                  class="product-card_image"
+                  alt="Cake item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">cake item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">5</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-item="doughnuts">
+              <div class="product-card_media">
+                <img
+                  src="images/doughnut-1.jpeg"
+                  class="product-card_image"
+                  alt="Doughnut item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">doughnut item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">5</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-item="sweets">
+              <div class="product-card_media">
+                <img
+                  src="images/sweets-2.jpeg"
+                  class="product-card_image"
+                  alt="Sweet item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">sweet item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">10</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-item="cupcakes">
+              <div class="product-card_media">
+                <img
+                  src="images/cupcake-2.jpeg"
+                  class="product-card_image"
+                  alt="Cupcake item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">cupcake item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">10</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-item="cakes">
+              <div class="product-card_media">
+                <img
+                  src="images/cake-2.jpeg"
+                  class="product-card_image"
+                  alt="Cake item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">cake item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">10</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-item="doughnuts">
+              <div class="product-card_media">
+                <img
+                  src="images/doughnut-2.jpeg"
+                  class="product-card_image"
+                  alt="Doughnut item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">doughnut item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">10</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-item="sweets">
+              <div class="product-card_media">
+                <img
+                  src="images/sweets-3.jpeg"
+                  class="product-card_image"
+                  alt="Sweet item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">sweet item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">15</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-item="cupcakes">
+              <div class="product-card_media">
+                <img
+                  src="images/cupcake-3.jpeg"
+                  class="product-card_image"
+                  alt="Cupcake item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">cupcake item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">15</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-item="cakes">
+              <div class="product-card_media">
+                <img
+                  src="images/cake-3.jpeg"
+                  class="product-card_image"
+                  alt="Cake item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">cake item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">15</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card" data-item="doughnuts">
+              <div class="product-card_media">
+                <img
+                  src="images/doughnut-3.jpeg"
+                  class="product-card_image"
+                  alt="Doughnut item"
+                />
+                <button class="add-to-cart-button">
+                  <svg
+                    class="cart-summary_icon"
+                    fill="#000000"
+                    width="18px"
+                    viewBox="0 -32 576 576"
+                  >
+                    <path
+                      d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="product-card_body">
+                <div class="product-card_meta">
+                  <h5 class="product-card_name">doughnut item</h5>
+                  <h5 class="product-card-price">
+                    $ <strong class="product-card-price-value">15</strong>
+                  </h5>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
