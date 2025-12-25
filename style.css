@@ -435,7 +435,8 @@ p {
   cursor: pointer;
   transition: var(--tr03);
 }
-.filter-button:hover {
+.filter-button:hover,
+.filter-button.active {
   background: black;
   color: var(--mainPink);
 }
@@ -570,4 +571,42 @@ p {
   .page-container {
     max-width: 1140px;
   }
+}
+
+/* Notification Toast */
+.notification {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--mainPink);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: var(--tr03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Empty States */
+.cart-empty,
+.no-products {
+  text-align: center;
+  color: #6c757d;
+  padding: 2rem;
+  font-style: italic;
+}
+
+.no-products {
+  grid-column: 1 / -1;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 3rem;
 }
